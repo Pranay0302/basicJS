@@ -1,5 +1,10 @@
 // typeof
 
+var x;
+console.log(typeof x); // will print out undefined
+
+
+
 console.log(typeof 7);
 console.log(typeof 'lame');
 console.log(typeof true);
