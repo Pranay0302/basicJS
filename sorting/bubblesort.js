@@ -19,4 +19,4 @@ function bubblesort(n) {
 
 }
 
-console.log(bubblesort(n));
+console.log(`${bubblesort(n)}`);
