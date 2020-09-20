@@ -1,5 +1,3 @@
-// recursion using stacks
-
 const stack = require('./stack');
 
 const s = new stack();
