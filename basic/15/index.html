@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+
+<body>
+    <img src="" id="testing" width="100%" />
+    <script>
+        async function black() {
+            const response = await fetch('black.jpeg');
+            const result = await response.blob();
+            document.getElementById('testing').src = URL.createObjectURL(result);
+        }
+
+        black()
+            .catch(err => {
+                console.log(err);
+            })
+    </script>
+</body>
+
+</html>
