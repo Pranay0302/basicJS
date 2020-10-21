@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Pranay0302/basicJS/issues"
   },
-  "homepage": "https://github.com/Pranay0302/basicJS#readme"
+  "homepage": "https://github.com/Pranay0302/basicJS#readme",
+  "dependencies": {
+    "mongoose": "^5.10.9"
+  }
 }
