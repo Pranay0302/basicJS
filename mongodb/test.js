@@ -5,20 +5,41 @@ function connect() {
 }
 
 const student = new mongoose.Schema({
-    firstName: String,
+    firstName: {
+        type: String,
+        required: true,
+        unique: true
+    },
     age: Number,
-    school: String
+    school: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'yesnice'
+
+    }
 }, { timestamps: true })
 
 
+const school = new mongoose.Schema({
+    name: String
+})
+
+
+const School = new mongoose.model('yesnice', school)
 const Student = new mongoose.model('student', student);
 
 
 connect()
     .then(async connection => {
-        const deets = await Student.create({ firstName: 'Anthony', age: '18', school: 'DPS' });
-        const ID = await Student.findById('5f9022faf78b423515df8fa6'); //felix's id
-        console.log(deets);
-        console.log(ID);
+
+        const school = await School.create({ name: 'DPS' });
+        const deets = await Student.create({ firstName: 'Anthony', school: school._id });
+        // const ID = await Student.findById('5f9022faf78b423515df8fa6'); //felix's id
+
+        const pop = await Student.findById(deets.id)
+            .populate('school')
+            .exec()
+
+        console.log(pop);
     })
     .catch(err => console.error(err));
