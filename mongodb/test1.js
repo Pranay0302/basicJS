@@ -29,7 +29,7 @@ function connect() {
     return mongoose.connect('mongodb://localhost:27017/simple_stuff');
 }
 
-app.get('/doge', async(res, req) => {
+app.get('/doge', async(req, res) => {
     console.log('checking...');
     const inu = await Dog.find({}).lean().exec();
     res.status(200).json(inu);
@@ -38,7 +38,7 @@ app.get('/doge', async(res, req) => {
 connect()
     .then(async connection => {
         app.listen(5000, () => {
-            console.log("checking...")
+            console.log("running on localhost:5000");
         })
     })
     .catch(err => console.err(err));
