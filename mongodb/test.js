@@ -7,8 +7,6 @@ function connect() {
 const student = new mongoose.Schema({
     firstName: {
         type: String,
-        required: true,
-        unique: true
     },
     age: Number,
     school: {
@@ -21,15 +19,31 @@ const student = new mongoose.Schema({
 
 
 const school = new mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+    },
     principal: String,
     students: Number,
     isGreat: Boolean,
-})
+}, { timestamps: true })
+
+
+
+student.index({
+    firstName: 1
+}, { unique: true, required: true })
+
+school.index({
+        name: 1
+    }, { unique: true }) // for better understanding (uniqueness)
+
+
 
 
 const School = new mongoose.model('yesnice', school)
 const Student = new mongoose.model('student', student);
+
+
 
 
 connect()
@@ -80,6 +94,6 @@ connect()
             .exec()
 
         console.log(find);
-        // console.log(schools);
+        console.log(schools);
     })
     .catch(err => console.error(err));
