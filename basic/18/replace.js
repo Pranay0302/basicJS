@@ -23,3 +23,9 @@ console.log(l);
 var c = 'loalkjnfrem ipsihfowsum is 9302u e20_30';
 var d = c.replace(/\w/g, 'm');
 console.log(d);
+
+var u = 'let it go and i can wait to get to home Et ETfhsoie 38298479 839u4 2739';
+var i = u.replace(/[et\d]/ig, '#');
+var e = u.replace(/[^et\s\d]/ig, '#');
+console.log(i);
+console.log(e);
