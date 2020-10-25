@@ -19,7 +19,20 @@ const dogs = new mongoose.Schema({
 
 })
 
-const Dog = new mongoose.model('doge', dogs)
+const cats = new mongoose.Schema({
+    breed: {
+        type: String,
+        fur: Boolean,
+    },
+
+    food: {
+        type: String,
+        weight: Number,
+    },
+});
+
+const Dog = new mongoose.model('doge', dogs);
+const Cat = new mongoose.model('kitty', cats);
 
 app.use(morgan('dev'));
 app.use(urlencoded({ extended: true }));
@@ -30,9 +43,18 @@ function connect() {
 }
 
 app.get('/doge', async(req, res) => {
-    console.log('checking...');
+    console.log('checking doge');
     const inu = await Dog.find({}).lean().exec();
     res.status(200).json(inu);
+
+})
+
+app.get('/kitty', async(req, res) => {
+    console.log('checking neko');
+    const neko = await Cat.find({}).lean().exec();
+    // console.log(res);
+    res.status(200).json(neko);
+
 })
 
 connect()
