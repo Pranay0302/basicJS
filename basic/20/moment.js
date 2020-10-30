@@ -12,13 +12,7 @@ console.log(three);
 
 const four = moment().format('LT');
 console.log(four);
-// const ref = four.split(" ");
-// const newref = []
-// const reg = (ref) => {
-//     for (let i = 0; i < ref.length; i++) {
-//         newref.push(ref[i], ref[i+1]).join(" ");
-//     }
-// }
+
 const five = moment().calendar();
 console.log(five);
 
