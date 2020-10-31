@@ -1,0 +1,1 @@
+- fs is referred to as file system which helps us to interact with the file systems present in our local machine

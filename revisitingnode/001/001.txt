@@ -1,0 +1,10 @@
+changing the file into an exec file:
+
+- #! /usr/bin/env node
+- chmod u+x {filename}
+- ./{filename}
+
+process.env deals with the environment variables
+
+- if the command looks like ```hey={something} ./001.js```
+- it will console.log {something}

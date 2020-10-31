@@ -1,0 +1,4 @@
+- __dirname gives us the absolute path of the directory
+- __filename gives us the absolute path of the file
+
+- process.cwd() is similar to __dirname
