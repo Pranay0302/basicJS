@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
+const connect = require('./utils/db');
 
-function connect() {
-    return mongoose.connect('mongodb://localhost:27017/trial');
-}
+connect('mongodb://localhost:27017/trial');
 
 const student = new mongoose.Schema({
     firstName: {

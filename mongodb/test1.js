@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const { urlencoded, json } = require('body-parser');
+const connect = require('./utils/db');
 
 
 
@@ -38,9 +39,7 @@ app.use(morgan('dev'));
 app.use(urlencoded({ extended: true }));
 app.use(json());
 
-function connect() {
-    return mongoose.connect('mongodb://localhost:27017/simple_stuff');
-}
+connect('mongodb://localhost:27017/simple_stuff');
 
 app.get('/doge', async(req, res) => {
     console.log('checking doge');
@@ -57,7 +56,7 @@ app.get('/kitty', async(req, res) => {
 
 })
 
-connect()
+connect('mongodb://localhost:27017/simple_stuff')
     .then(async connection => {
         app.listen(5000, () => {
             console.log("running on localhost:5000");
