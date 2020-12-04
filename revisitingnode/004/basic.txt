@@ -1,0 +1,1 @@
+hello from dir:/Users/${HOME}/basicJS/revisitingnode/004 and file: /Users/${HOME}/basicJS/revisitingnode/004/wrinbasic.js
