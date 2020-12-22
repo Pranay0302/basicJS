@@ -1,27 +1,28 @@
 {
-  "name": "basicjs",
-  "version": "1.0.0",
-  "description": "basic javascript programs including ds and algo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Pranay0302/basicJS.git"
-  },
-  "author": "Pranay Kumar Andra",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Pranay0302/basicJS/issues"
-  },
-  "homepage": "https://github.com/Pranay0302/basicJS#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "http": "0.0.1-security",
-    "moment": "^2.29.1",
-    "mongoose": "^5.10.9",
-    "morgan": "^1.10.0"
-  }
+    "name": "basicjs",
+    "version": "1.0.0",
+    "description": "basic javascript programs including ds and algo",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Pranay0302/basicJS.git"
+    },
+    "author": "Pranay Kumar Andra",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Pranay0302/basicJS/issues"
+    },
+    "homepage": "https://github.com/Pranay0302/basicJS#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "http": "0.0.1-security",
+        "moment": "^2.29.1",
+        "mongoose": "^5.11.8",
+        "morgan": "^1.10.0",
+        "mquery": "^3.2.3"
+    }
 }
